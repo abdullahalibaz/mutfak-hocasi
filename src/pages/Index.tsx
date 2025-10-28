@@ -1,12 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { KitchenConfigurator } from "@/components/kitchen/KitchenConfigurator";
+import { PriceSummary } from "@/components/kitchen/PriceSummary";
+import { useKitchenConfig } from "@/hooks/useKitchenConfig";
 
 const Index = () => {
+  const config = useKitchenConfig();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <header className="bg-primary text-primary-foreground py-6 px-4 shadow-lg">
+        <div className="container mx-auto">
+          <h1 className="text-2xl md:text-3xl font-bold text-center">
+            Mutfak Tasarım Konfiguratörü
+          </h1>
+          <p className="text-center mt-2 text-sm md:text-base opacity-90">
+            Hayalinizdeki mutfağı tasarlayın, anında fiyat alın
+          </p>
+        </div>
+      </header>
+
+      <main className="container mx-auto py-6 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+            <KitchenConfigurator config={config} />
+          </div>
+          <div className="lg:col-span-1">
+            <PriceSummary config={config} />
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
