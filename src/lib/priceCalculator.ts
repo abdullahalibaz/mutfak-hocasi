@@ -90,7 +90,25 @@ export const calculateTotalPrice = (config: KitchenConfig): number => {
     total += totalWidth * 250;
   }
 
-  // 4. Extra outlets
+  // 4. Island calculation
+  if (config.hasIsland && config.islandHeight && config.islandWidth && config.doorType) {
+    const heightInMeters = parseFloat(config.islandHeight) / 100;
+    const widthInMeters = parseFloat(config.islandWidth) / 100;
+    const islandArea = heightInMeters * widthInMeters;
+    
+    const ISLAND_DOOR_PRICES: Record<string, number> = {
+      "flat": 7500,
+      "lake": 10500,
+      "membrane": 10500,
+      "solid-veneer": 10500,
+      "tempered-glass": 7500,
+    };
+    
+    const islandPrice = ISLAND_DOOR_PRICES[config.doorType] || 7500;
+    total += islandArea * islandPrice;
+  }
+
+  // 5. Extra outlets
   if (config.extraOutlets) {
     const outlets = parseInt(config.extraOutlets);
     if (!isNaN(outlets)) {
@@ -98,7 +116,7 @@ export const calculateTotalPrice = (config: KitchenConfig): number => {
     }
   }
 
-  // 5. Refrigerator discount
+  // 6. Refrigerator discount
   if (config.appliances.refrigerator) {
     total -= 5000;
   }

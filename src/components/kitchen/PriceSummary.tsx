@@ -66,11 +66,11 @@ export const PriceSummary = ({ config }: Props) => {
 
         <Button 
           onClick={handleSubmit} 
-          className="w-full"
+          className="w-full bg-green-600 hover:bg-green-700 text-white"
           size="lg"
         >
           <Send className="w-4 h-4 mr-2" />
-          Teklif Al
+          Randevu almak için Gönder
         </Button>
       </Card>
     </div>

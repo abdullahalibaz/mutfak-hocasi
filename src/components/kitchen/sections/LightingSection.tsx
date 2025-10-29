@@ -51,7 +51,6 @@ export const LightingSection = ({ config }: Props) => {
                   ? "border-primary bg-secondary"
                   : "border-border"
               )}
-              disabled={option.id !== "none" && kitchenConfig.ledType === "none"}
             >
               <Label className="cursor-pointer font-medium">
                 {option.label}
