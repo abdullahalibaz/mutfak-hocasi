@@ -55,20 +55,20 @@ export const KitchenShapeSelector = ({ config }: Props) => {
         >
           <div className="w-full h-32 mb-3 flex items-center justify-center">
             <svg viewBox="0 0 200 120" className="w-full h-full">
-              {/* L-shape */}
-              <path d="M 20 20 L 20 85 L 140 85 L 140 105 L 180 105 L 180 85 L 140 85 L 140 60 L 180 60 L 180 20 Z" 
+              {/* L-shape - simple and clean */}
+              <path d="M 30 25 L 30 80 L 140 80 L 140 100 M 140 80 L 170 80 L 170 25 L 30 25" 
                     fill="none" stroke="currentColor" strokeWidth="3" />
               
               {/* X dimension arrow (horizontal) */}
-              <line x1="20" y1="15" x2="180" y2="15" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrow)" markerStart="url(#arrow)" />
+              <line x1="30" y1="15" x2="170" y2="15" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrow-l)" markerStart="url(#arrow-l)" />
               <text x="100" y="12" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">X</text>
               
               {/* Y dimension arrow (vertical) */}
-              <line x1="12" y1="20" x2="12" y2="85" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrow)" markerStart="url(#arrow)" />
-              <text x="8" y="55" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">Y</text>
+              <line x1="20" y1="25" x2="20" y2="80" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrow-l)" markerStart="url(#arrow-l)" />
+              <text x="16" y="55" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">Y</text>
               
               <defs>
-                <marker id="arrow" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                <marker id="arrow-l" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
                   <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
                 </marker>
               </defs>
