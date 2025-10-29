@@ -55,21 +55,21 @@ export const KitchenShapeSelector = ({ config }: Props) => {
         >
           <div className="w-full h-32 mb-3 flex items-center justify-center">
             <svg viewBox="0 0 200 120" className="w-full h-full">
-              {/* L-shape - simple and clean */}
-              <path d="M 30 25 L 30 80 L 140 80 L 140 100 M 140 80 L 170 80 L 170 25 L 30 25" 
-                    fill="none" stroke="currentColor" strokeWidth="3" />
+              {/* Simple L-shape - just two lines */}
+              <path d="M 40 30 L 40 85 L 160 85" 
+                    fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
               
               {/* X dimension arrow (horizontal) */}
-              <line x1="30" y1="15" x2="170" y2="15" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrow-l)" markerStart="url(#arrow-l)" />
-              <text x="100" y="12" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">X</text>
+              <line x1="40" y1="100" x2="160" y2="100" stroke="currentColor" strokeWidth="3" markerEnd="url(#arrow-l)" markerStart="url(#arrow-l)" />
+              <text x="100" y="112" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="bold">X</text>
               
               {/* Y dimension arrow (vertical) */}
-              <line x1="20" y1="25" x2="20" y2="80" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrow-l)" markerStart="url(#arrow-l)" />
-              <text x="16" y="55" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">Y</text>
+              <line x1="25" y1="30" x2="25" y2="85" stroke="currentColor" strokeWidth="3" markerEnd="url(#arrow-l)" markerStart="url(#arrow-l)" />
+              <text x="15" y="60" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="bold">Y</text>
               
               <defs>
-                <marker id="arrow-l" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
-                  <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+                <marker id="arrow-l" markerWidth="12" markerHeight="10" refX="6" refY="5" orient="auto">
+                  <polygon points="0 0, 12 5, 0 10" fill="currentColor" />
                 </marker>
               </defs>
             </svg>
