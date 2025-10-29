@@ -30,10 +30,12 @@ export const KitchenShapeSelector = ({ config }: Props) => {
         >
           <div className="w-full h-32 mb-3 flex items-center justify-center">
             <svg viewBox="0 0 200 100" className="w-full h-full">
-              <rect x="20" y="25" width="160" height="50" fill="none" stroke="currentColor" strokeWidth="3" />
-              {/* X dimension arrow */}
-              <line x1="20" y1="85" x2="180" y2="85" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrowhead)" markerStart="url(#arrowhead)" />
-              <text x="100" y="95" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="bold">X</text>
+              {/* Horizontal rectangle for single front kitchen */}
+              <rect x="40" y="30" width="120" height="30" fill="none" stroke="currentColor" strokeWidth="3" />
+              
+              {/* X dimension label below */}
+              <text x="100" y="75" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">X</text>
+              
               <defs>
                 <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
                   <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
@@ -55,20 +57,18 @@ export const KitchenShapeSelector = ({ config }: Props) => {
         >
           <div className="w-full h-32 mb-3 flex items-center justify-center">
             <svg viewBox="0 0 200 120" className="w-full h-full">
-              {/* Simple L-shape - two rectangles forming an L (outline only) */}
-              <rect x="30" y="25" width="15" height="60" fill="none" stroke="currentColor" strokeWidth="3" />
-              <rect x="30" y="70" width="130" height="15" fill="none" stroke="currentColor" strokeWidth="3" />
+              {/* L-shape: vertical part on left, horizontal part at bottom */}
+              <rect x="60" y="20" width="25" height="55" fill="none" stroke="currentColor" strokeWidth="3" />
+              <rect x="60" y="60" width="80" height="25" fill="none" stroke="currentColor" strokeWidth="3" />
               
-              {/* X dimension arrow (horizontal) */}
-              <line x1="30" y1="95" x2="160" y2="95" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrowhead)" markerStart="url(#arrowhead)" />
-              <text x="95" y="108" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="bold">X</text>
+              {/* Y dimension label at top */}
+              <text x="72.5" y="15" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">Y</text>
               
-              {/* Y dimension arrow (vertical) */}
-              <line x1="15" y1="25" x2="15" y2="70" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrowhead)" markerStart="url(#arrowhead)" />
-              <text x="8" y="50" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="bold">Y</text>
+              {/* X dimension label at right side */}
+              <text x="145" y="72.5" textAnchor="middle" fill="currentColor" fontSize="14" fontWeight="bold">X</text>
               
               <defs>
-                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+                <marker id="arrowhead-l" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
                   <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
                 </marker>
               </defs>
