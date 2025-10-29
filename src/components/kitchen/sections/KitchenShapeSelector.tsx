@@ -55,9 +55,9 @@ export const KitchenShapeSelector = ({ config }: Props) => {
         >
           <div className="w-full h-32 mb-3 flex items-center justify-center">
             <svg viewBox="0 0 200 120" className="w-full h-full">
-              {/* Simple L-shape - two rectangles forming an L */}
-              <rect x="30" y="25" width="15" height="60" fill="currentColor" />
-              <rect x="30" y="70" width="130" height="15" fill="currentColor" />
+              {/* Simple L-shape - two rectangles forming an L (outline only) */}
+              <rect x="30" y="25" width="15" height="60" fill="none" stroke="currentColor" strokeWidth="3" />
+              <rect x="30" y="70" width="130" height="15" fill="none" stroke="currentColor" strokeWidth="3" />
               
               {/* X dimension arrow (horizontal) */}
               <line x1="30" y1="95" x2="160" y2="95" stroke="currentColor" strokeWidth="2" markerEnd="url(#arrowhead)" markerStart="url(#arrowhead)" />
